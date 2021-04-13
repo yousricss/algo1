@@ -1,0 +1,30 @@
+ALGORITHM task1
+VAR
+    s:STRING;
+    count_char:INTEGER:=1;
+    count_vow:INTEGER;
+    count_word:INTEGER:=1;
+    i:INTEGER;
+BEGIN
+
+    i=0;
+    WHILE (s[i] <> ".") DO
+        i:=i+1;
+        IF (s[i] <> " ") THEN
+            count_char:=count_char+1;
+        END_IF
+        IF (s[i] = " ") THEN
+            count_word:= count_word+1;
+        END_IF
+
+        IF (s[i] in ["a","A","u","U","i","I","o","O","Y","y","e","E"]) THEN
+            count_vow:=count_vow+1
+        END_IF
+        
+        
+
+    END_WHILE
+    Write("The number of characters are ",count_char)
+    Write("The number of vowels are ",count_vow)
+    Write("The number of word are ",count_word)
+END
